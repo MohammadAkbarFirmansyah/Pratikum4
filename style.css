@@ -97,6 +97,15 @@ section {
   height: auto;
 }
 
+#about ul {
+  list-style-type: disc;
+  padding-left: 20px;
+}
+
+#about li {
+  margin-bottom: 10px;
+}
+
 /* Multimedia */
 #multimedia {
   text-align: center;
@@ -225,11 +234,18 @@ footer a:hover {
     flex-direction: column;
     gap: 10px;
     width: 100%;
+    justify-content: center;
+    align-items: center;
+  }
+
+  nav ul li {
+    width: 100%;
     text-align: center;
   }
 
   nav ul a {
     padding: 8px 10px;
+    display: block;
   }
 
   main {
@@ -245,6 +261,10 @@ footer a:hover {
   #projects h1,
   #contact h2 {
     font-size: 1.2em;
+  }
+
+  #about li {
+    margin-bottom: 8px;
   }
 
   #projects .project-container {
