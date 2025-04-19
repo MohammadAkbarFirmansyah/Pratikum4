@@ -1,6 +1,8 @@
 /* Umum */
 * {
   box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 html {
@@ -9,11 +11,10 @@ html {
 
 body {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  margin: 0;
-  padding: 0;
   background-color: #f4f4f4;
   color: #333;
   line-height: 1.6;
+  overflow-x: hidden;
 }
 
 /* Header */
@@ -25,11 +26,13 @@ header {
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
+  width: 100%;
 }
 
 header h1 {
   margin: 0;
   font-size: 1.4em;
+  max-width: 100%;
 }
 
 /* Navigasi */
@@ -97,6 +100,14 @@ section {
 /* Multimedia */
 #multimedia {
   text-align: center;
+}
+
+video,
+audio {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 10px auto;
 }
 
 /* Projects */
@@ -181,12 +192,14 @@ footer {
   color: white;
   padding: 20px 0;
   margin-top: 40px;
+  width: 100%;
 }
 
 footer p,
 footer ul {
   text-align: center;
   margin: 5px 0;
+  max-width: 100%;
 }
 
 footer a {
@@ -204,19 +217,23 @@ footer a:hover {
 /* Mobile (<600px) */
 @media (max-width: 599px) {
   header {
-    flex-direction: column;
-    text-align: center;
-    gap: 15px;
+    padding: 15px;
+    width: 100%;
   }
 
   nav ul {
     flex-direction: column;
     gap: 10px;
+    width: 100%;
+    text-align: center;
+  }
+
+  nav ul a {
+    padding: 8px 10px;
   }
 
   main {
-    grid-template-columns: 1fr;
-    padding: 10px;
+    padding: 10px 0;
   }
 
   section {
@@ -259,6 +276,11 @@ footer a:hover {
   #contact button {
     padding: 8px 16px;
   }
+
+  footer {
+    padding: 15px 0;
+    width: 100%;
+  }
 }
 
 /* Tablet (600px–1024px) */
@@ -267,6 +289,7 @@ footer a:hover {
     flex-direction: row;
     justify-content: space-between;
     padding: 15px;
+    width: 100%;
   }
 
   nav ul {
@@ -275,7 +298,6 @@ footer a:hover {
   }
 
   main {
-    grid-template-columns: 1fr;
     padding: 15px;
   }
 
@@ -298,12 +320,17 @@ footer a:hover {
   #contact form {
     max-width: 500px;
   }
+
+  footer {
+    width: 100%;
+  }
 }
 
 /* Desktop (>1024px) */
 @media (min-width: 1025px) {
   header {
     padding: 20px 40px;
+    width: 100%;
   }
 
   nav ul {
@@ -335,5 +362,9 @@ footer a:hover {
 
   #contact form {
     max-width: 600px;
+  }
+
+  footer {
+    width: 100%;
   }
 }
