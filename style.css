@@ -1,12 +1,7 @@
-/* Umum */
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-}
-
-html {
-  scroll-behavior: smooth;
 }
 
 body {
@@ -71,7 +66,6 @@ main {
   gap: 30px;
 }
 
-/* General Section Styling */
 section {
   background-color: #ffffff;
   border: 1px solid #ccc;
@@ -95,11 +89,8 @@ section {
   border-radius: 50%;
   max-width: 100%;
   height: auto;
-  transition: transform 0.2s ease, box-shadow 0.2s ease, opacity 0.2s ease;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
   cursor: pointer;
-  touch-action: manipulation;
-  user-select: none;
-  -webkit-tap-highlight-color: transparent;
 }
 
 #about img:hover {
@@ -109,7 +100,6 @@ section {
 
 #about img:active {
   transform: scale(0.95);
-  opacity: 0.8;
 }
 
 #about ul {
@@ -140,15 +130,12 @@ video {
 }
 
 #projects .project-container {
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: 1fr;
   gap: 20px;
-  justify-content: center;
 }
 
 #projects .project-item {
-  flex: 1 1 100%;
-  max-width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -160,11 +147,8 @@ video {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   max-width: 100%;
   height: auto;
-  transition: transform 0.2s ease, box-shadow 0.2s ease, opacity 0.2s ease;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
   cursor: pointer;
-  touch-action: manipulation;
-  user-select: none;
-  -webkit-tap-highlight-color: transparent;
 }
 
 #projects img:hover {
@@ -174,7 +158,6 @@ video {
 
 #projects img:active {
   transform: scale(0.95);
-  opacity: 0.8;
 }
 
 #projects article {
@@ -182,13 +165,6 @@ video {
   margin: 0 auto;
   width: 80%;
   border-radius: 10px;
-}
-
-/* Interactive image effect */
-.interactive-img.tapped {
-  transform: scale(0.95);
-  opacity: 0.8;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 /* Contact */
@@ -261,43 +237,6 @@ footer a:hover {
   color: #00d1ff;
 }
 
-/* Modal */
-.modal {
-  display: none;
-  position: fixed;
-  z-index: 1000;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.8);
-  justify-content: center;
-  align-items: center;
-}
-
-.modal-content {
-  max-width: 90%;
-  max-height: 90%;
-  margin: auto;
-  display: block;
-}
-
-.modal-close {
-  position: absolute;
-  top: 20px;
-  right: 30px;
-  color: white;
-  font-size: 40px;
-  font-weight: bold;
-  cursor: pointer;
-}
-
-.modal-close:hover {
-  color: #ffd700;
-}
-
-/* Media Queries */
-
 /* Mobile (<600px) */
 @media (max-width: 599px) {
   header {
@@ -351,12 +290,6 @@ footer a:hover {
   #about img:active,
   #projects img:active {
     transform: scale(0.97);
-    opacity: 0.8;
-  }
-
-  .interactive-img.tapped {
-    transform: scale(0.97);
-    opacity: 0.8;
   }
 
   video,
@@ -365,12 +298,11 @@ footer a:hover {
   }
 
   #projects .project-container {
-    flex-direction: column;
+    grid-template-columns: 1fr;
   }
 
   #projects .project-item {
-    flex: 1 1 100%;
-    max-width: 100%;
+    flex-direction: column;
   }
 
   #projects article {
@@ -399,16 +331,6 @@ footer a:hover {
     padding: 15px 0;
     width: 100%;
   }
-
-  .modal-content {
-    max-width: 95%;
-    max-height: 85%;
-  }
-
-  .modal-close {
-    font-size: 30px;
-    right: 20px;
-  }
 }
 
 /* Tablet (600px–1024px) */
@@ -430,12 +352,11 @@ footer a:hover {
   }
 
   #projects .project-container {
-    flex-direction: row;
+    grid-template-columns: repeat(2, 1fr);
   }
 
   #projects .project-item {
-    flex: 1 1 45%;
-    max-width: 48%;
+    flex-direction: column;
   }
 
   #projects article {
@@ -474,12 +395,11 @@ footer a:hover {
   }
 
   #projects .project-container {
-    flex-direction: row;
+    grid-template-columns: repeat(2, 1fr);
   }
 
   #projects .project-item {
-    flex: 1 1 45%;
-    max-width: 48%;
+    flex-direction: column;
   }
 
   #projects article {
