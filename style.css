@@ -95,6 +95,17 @@ section {
   border-radius: 50%;
   max-width: 100%;
   height: auto;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+#about img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+#about img:active {
+  transform: scale(0.95);
 }
 
 #about ul {
@@ -116,6 +127,7 @@ video {
   height: auto;
   display: block;
   margin: 10px auto;
+  visibility: visible;
 }
 
 /* Projects */
@@ -141,6 +153,17 @@ video {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   max-width: 100%;
   height: auto;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+#projects img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+#projects img:active {
+  transform: scale(0.95);
 }
 
 #projects article {
@@ -264,6 +287,22 @@ footer a:hover {
 
   #about li {
     margin-bottom: 8px;
+  }
+
+  #about img:hover,
+  #projects img:hover {
+    transform: scale(1.03);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+
+  #about img:active,
+  #projects img:active {
+    transform: scale(0.97);
+  }
+
+  video,
+  audio {
+    margin: 8px auto;
   }
 
   #projects .project-container {
